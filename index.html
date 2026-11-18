@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<title>HOME :INDEX</title>
+
+</head>
+
+<body onload="startTime()" style="text-align:right;" >
+
+<h2>JavaScript My Clock</h2>
+
+<div id="txt"></div>
+
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<header><h1>MY RESUME : HOME </h1> </header>
+<nav>
+<a href="lab1.html" target="_blank">ABOUT ME</a><br>
+<a href="edu.html" target="_top">EDUCATION</a><br>
+<a href="IMD318_Individual.pdf" target="_blank">SKILLS</a><br>
+<a href="family.avif" target="_blank">FAMILY</a><br>
+<a href="gallery.html" target="_blank">GALLERY</a><br>
+SOCIAL MEDIA : <br>
+<a href="https://www.facebook.com/" target="_blank"><img src="fb.png" width="35" height="35"></a>
+<a href="https://www.threads.com/" target="_blank"><img src="td.png" width="35" height="35"></a>
+</nav>
+
+<section><h1>This is My Section</h1>
+<p>my Name is UMMU ASYIKIN BINTI OTHMAN</P>
+</section>
+<footer> Copyright &copy; UMMU ASYIKIN OTHMAN</footer>
+
+</body>
+</html>
+
+
